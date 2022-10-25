@@ -90,9 +90,19 @@ public class game_create extends JFrame implements ActionListener {
         button_CPanel.add(btnCAdd);
         button_CPanel.add(btnCClear);
         button_CPanel.add(btnCList);
-        display_Cpanel.add(jteC);
+        display_Cpanel.add(jteC);}
 
 
+    public void populateList(){
+        Location[] arrofLocations = {new Location("south 1") new Location("south 2"),
+        new Location("east 1")};
+        Character[] arrofCha = {new Character("a"), new Character("b"), new Character("c")};
+        for (int i = 0; i < arrofLocations.length; i++){
+            arrofLocations[i].setlocation_size(arrofLocations[i].getLocation_name());
+            loc.add(arrofLocations[i]);}
+        for (int i =0; i < arrofCha.length; i++){
+            cha.add(arrofCha[i]);
+        }
 
     }
     @Override
