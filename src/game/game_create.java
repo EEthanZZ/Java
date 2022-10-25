@@ -10,6 +10,14 @@ public class game_create extends JFrame implements ActionListener {
     private ArrayList<Character> cha;
     private ArrayList<Location> loc;
 
+    JButton btnLList, btnLClear;
+    JTextArea jteC;
+
+
+    JButton btnCList, btnCClear, btnCAdd;
+    JTextArea jteL;
+    JLabel lblN_name;
+    JTextField txt_name;
 
 
     @Override
