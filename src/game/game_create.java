@@ -54,10 +54,26 @@ public class game_create extends JFrame implements ActionListener {
         btnCAdd = new JButton("Add characters");
         btnCList = new JButton("List characters");
         btnCClear = new JButton("Clear");
-        jteL = new JTextArea(30, 50);
-        jteL.setBorder(new TitledBorder("List of characters"));
+        jteC = new JTextArea(30, 50);
+        jteC.setBorder(new TitledBorder("List of characters"));
 
         //build tabs
+        add(tabs, BorderLayout.CENTER);
+        tabs.addTab("Location", Loc_tab);
+        tabs.addTab("Characters", Cha_tab);
+
+        //build location tabs
+        Loc_tab.setLayout(new BorderLayout());
+        Loc_tab.add(display_Lpanel, BorderLayout.CENTER);
+        Loc_tab.add(bottom_Lpanel, BorderLayout.SOUTH);
+        jteL.setBorder(new TitledBorder("List if Books"));
+        btnLList.addActionListener(this);
+        btnLClear.addActionListener(this);
+        bottom_Lpanel.add(btnLClear);
+        bottom_Lpanel.add(btnCList);
+        display_Lpanel.add(scrollS);
+
+        //build character tabs
 
 
     }
