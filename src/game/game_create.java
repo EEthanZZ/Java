@@ -74,7 +74,16 @@ public class game_create extends JFrame implements ActionListener {
         display_Lpanel.add(scrollS);
 
         //build character tabs
+        Cha_tab.setLayout(new BorderLayout());
+        Cha_tab.add(input_Cpanel, BorderLayout.NORTH);
+        Cha_tab.add(display_Cpanel, BorderLayout.CENTER);
+        Cha_tab.add(button_CPanel, BorderLayout.SOUTH);
+        input_Cpanel.setLayout(new GridLayout(1, 2));
+        input_Cpanel.setBorder(new EmptyBorder(30, 30, 30, 30));
+        input_Cpanel.add(lblN_name);
+        input_Cpanel.add(txt_name);
 
+        //build button panel
 
     }
     @Override
