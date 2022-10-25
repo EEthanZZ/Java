@@ -84,6 +84,15 @@ public class game_create extends JFrame implements ActionListener {
         input_Cpanel.add(txt_name);
 
         //build button panel
+        btnCClear.addActionListener(this);
+        btnCList.addActionListener(this);
+        btnCAdd.addActionListener(this);
+        button_CPanel.add(btnCAdd);
+        button_CPanel.add(btnCClear);
+        button_CPanel.add(btnCList);
+        display_Cpanel.add(jteC);
+
+
 
     }
     @Override
