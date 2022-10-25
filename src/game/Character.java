@@ -12,3 +12,4 @@ public class Character {
         char_id = nextId++;
     }
 }
+
