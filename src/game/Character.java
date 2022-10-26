@@ -11,5 +11,11 @@ public class Character {
         this.char_name=char_name;
         char_id = nextId++;
     }
+
+    @Override
+    public String toString() {
+        return "\nCharacter ID: " + char_id + "\nname: " + char_name;
+
+    }
 }
 

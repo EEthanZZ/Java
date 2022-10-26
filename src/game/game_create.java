@@ -14,15 +14,15 @@ public class game_create extends JFrame implements ActionListener {
     private ArrayList<Location> loc;
 
     JButton btnLList, btnLClear;
-    JTextArea jteC;
+    JTextArea jteL;
 
 
     JButton btnCList, btnCClear, btnCAdd;
-    JTextArea jteL;
+    JTextArea jteC;
     JLabel lblN_name;
     JTextField txt_name;
 
-    public game_create(){
+    public game_create() {
         cha = new ArrayList<Character>();
         loc = new ArrayList<Location>();
 
@@ -37,9 +37,8 @@ public class game_create extends JFrame implements ActionListener {
 
         //for character tabs display
         jteL = new JTextArea(30, 50);
-        JScrollPane scrollS = new JScrollPane(jteC, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+        JScrollPane scrollS = new JScrollPane(jteL, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-
         btnLList = new JButton("List locations");
         btnLClear = new JButton("Clear locations");
 
@@ -48,7 +47,7 @@ public class game_create extends JFrame implements ActionListener {
         JPanel display_Cpanel = new JPanel();
         JPanel button_CPanel = new JPanel();
         input_Cpanel.setLayout(new GridLayout(2, 1));
-        input_Cpanel.setBorder(new EmptyBorder(30,30,30,30));
+        input_Cpanel.setBorder(new EmptyBorder(30, 30, 30, 30));
         lblN_name = new JLabel("Enter Name");
         txt_name = new JTextField(10);
         btnCAdd = new JButton("Add characters");
@@ -66,11 +65,11 @@ public class game_create extends JFrame implements ActionListener {
         Loc_tab.setLayout(new BorderLayout());
         Loc_tab.add(display_Lpanel, BorderLayout.CENTER);
         Loc_tab.add(bottom_Lpanel, BorderLayout.SOUTH);
-        jteL.setBorder(new TitledBorder("List if Books"));
+        jteL.setBorder(new TitledBorder("List if Locations"));
         btnLList.addActionListener(this);
         btnLClear.addActionListener(this);
         bottom_Lpanel.add(btnLClear);
-        bottom_Lpanel.add(btnCList);
+        bottom_Lpanel.add(btnLList);
         display_Lpanel.add(scrollS);
 
         //build character tabs
@@ -90,23 +89,67 @@ public class game_create extends JFrame implements ActionListener {
         button_CPanel.add(btnCAdd);
         button_CPanel.add(btnCClear);
         button_CPanel.add(btnCList);
-        display_Cpanel.add(jteC);}
+        display_Cpanel.add(jteC);
+    }
 
 
-    public void populateList(){
-        Location[] arrofLocations = {new Location("south 1") new Location("south 2"),
-        new Location("east 1")};
+    public void populateList() {
+        Location[] arrofLocations = {new Location("a1"), new Location("b2"),
+                new Location("c3")};
         Character[] arrofCha = {new Character("a"), new Character("b"), new Character("c")};
-        for (int i = 0; i < arrofLocations.length; i++){
+        for (int i = 0; i < arrofLocations.length; i++) {
             arrofLocations[i].setlocation_size(arrofLocations[i].getLocation_name());
-            loc.add(arrofLocations[i]);}
-        for (int i =0; i < arrofCha.length; i++){
+            loc.add(arrofLocations[i]);
+        }
+        for (int i = 0; i < arrofCha.length; i++) {
             cha.add(arrofCha[i]);
         }
-
     }
+
+    public static void main(String[] args) {
+        game_create aa = new game_create();
+        aa.populateList();
+        aa.setSize(600, 550);
+        aa.setLocationRelativeTo(null);
+        aa.setVisible(true);
+    }
+
+    public void display_locations(){
+        for (Location l:loc){
+            System.out.println(l);
+        }
+    }
+    public void add_cha() {
+        String name = txt_name.getText();
+        Character c = new Character(name);
+        cha.add(c);
+    }
+
+
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if (e.getSource() == btnCList) {
+            jteC.setText("");
+            for (Character c : cha) {
+                System.out.println(c);
+                jteC.append("\n" + c.toString() + "\n");
+            }
+        }
+        if (e.getSource() == btnLList) {
+            jteL.setText("");
+            for (Location l:loc) {
+                System.out.println(l);
+                jteL.append("\n" + l.toString() + "\n");
+            }
+        }
+        if (e.getSource() == btnCClear) {
+            jteC.setText("");
+        }
+        if (e.getSource() == btnLClear) {
+            jteL.setText("");
+        }
+        if (e.getSource() == btnCAdd) {
+            add_cha();
+        }
     }
 }
