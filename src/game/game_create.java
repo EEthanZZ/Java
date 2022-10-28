@@ -8,6 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * This class is for building JFrame
+ *
+ */
 public class game_create extends JFrame implements ActionListener {
 
     private ArrayList<Character> cha;
@@ -94,6 +98,11 @@ public class game_create extends JFrame implements ActionListener {
 
 
     public void populateList() {
+
+        /**
+         * This method is for listing string name in the JFrame
+         *
+         */
         Location[] arrofLocations = {new Location("a1"), new Location("b2"),
                 new Location("c3")};
         Character[] arrofCha = {new Character("a"), new Character("b"), new Character("c")};
@@ -107,6 +116,10 @@ public class game_create extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
+        /**
+         * This method is for run the game_create() method
+         *
+         */
         game_create aa = new game_create();
         aa.populateList();
         aa.setSize(600, 550);

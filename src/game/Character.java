@@ -1,5 +1,9 @@
 package game;
 
+/**
+ * This class is for Character Location tab
+ *
+ */
 public class Character {
     private int char_id;
 
