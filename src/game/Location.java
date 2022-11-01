@@ -22,11 +22,12 @@ public class Location {
         return location_name;
     }
 
+    /**
+     * This method is for getting the location sizes match to the location name
+     * @param location_name to return the name of the location
+     */
     public void setlocation_size(String location_name) {
-        /**
-         * This method is for getting the location sizes match to the location name
-         *
-         */
+
         if (location_name.equalsIgnoreCase("a1"))
             location_size = 10;
         else if (location_name.equalsIgnoreCase("b2"))
