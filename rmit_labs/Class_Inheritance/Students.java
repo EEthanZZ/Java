@@ -16,6 +16,6 @@ public class Students extends People{
     }
 
     public String toString(){
-        return super.toString + "program is " + program + ", is in year of " + year;
+        return super.toString() + "program is " + program + ", is in year of " + year;
     }
 }

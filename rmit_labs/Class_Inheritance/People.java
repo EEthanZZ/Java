@@ -5,24 +5,28 @@ public class People{
     protected String add;
     protected String email;
 
+    public People(){
+        System.out.println("superclass called");
+    }
+
     public People(String name_people, String add, String email){
-        this.name = name_people;
+        this.name_people = name_people;
         this.add = add;
         this.email = email;
     }
 
-    public String getName_people{
+    public String getName_people() {
         return name_people;
     }
 
-    public String getAdd{
+    public String getAdd() {
         return add;
     }
 
-    public String getEmail{
+    public String getEmail() {
         return email;
     }
     public String toString(){
-        return name + "lives at " + add + ", the email add is " + email;
+        return name_people + "lives at " + add + ", the email add is " + email;
     }
 }
