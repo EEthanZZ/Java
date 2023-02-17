@@ -1,4 +1,4 @@
-package rmit_labs;
+package rmit_labs.Class;
 
 public class Library {
     public static void main(String[] args) {
