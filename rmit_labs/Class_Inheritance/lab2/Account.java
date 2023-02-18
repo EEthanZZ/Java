@@ -30,7 +30,7 @@ public class Account {
         this.card_no = card_no;
     }
 
-    public String toString(String name, int card_no) {
+    public String toString() {
         return "The client " + name + " 's card number is " + card_no;
     }
 }

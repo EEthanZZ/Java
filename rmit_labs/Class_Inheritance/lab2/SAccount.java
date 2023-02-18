@@ -25,7 +25,7 @@ public class SAccount extends Account {
         return amount;
     }
 
-    public String toString(int amount) {
+    public String toString() {
         return super.toString() + ". availiable amount is " + amount;
     }
 }
