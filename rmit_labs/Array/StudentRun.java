@@ -4,31 +4,25 @@ import java.util.Scanner;
 
 public class StudentRun {
     public static void main(String[] args) {
-        int count = 0; // to count elements(students) created
+        int count = 0;
         String choice = "y";
-        // create array object
-        Student[] students = new Student[5];
+        Student[] students = new Student[3];
         while (choice.equalsIgnoreCase("y")) {
-            // create Scanner
             Scanner input = new Scanner(System.in);
-            // prompt and read
-            System.out.println("Student name:");
+            System.out.println("Student name: ");
             String name = input.nextLine();
-            System.out.println("Student number:");
+            System.out.println("Number: ");
             int number = input.nextInt();
-            // create array element using constructor
             students[count] = new Student(name, number);
-            // increment count
             count++;
-            // check user choice
-            // create a Scanner to read choice
-            Scanner choiceInput = new Scanner(System.in);
-            System.out.println("Do you wish to proceed?(y/n)");
-            choice = choiceInput.nextLine();
+            Scanner choiceinout = new Scanner(System.in);
+            System.out.println("Do you wish to proceed?(Y/n)");
+            choice = choiceinout.nextLine();
         }
-        // display array
-        students[2].setName("J");
+        students[1].setName("Mike");
+        students[0].setNumber(4);
         for (int i = 0; i < count; i++)
             System.out.println(students[i]);
-    }// main
-}// class
+
+    }
+}
