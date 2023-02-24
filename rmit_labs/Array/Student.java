@@ -11,6 +11,7 @@ public class Student {
     public Student(String name, int number) {
         this.name = name;
         this.number = number;
+        System.out.println("Student class is called two");
     }
 
     public String getName() {
@@ -23,6 +24,10 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public String toString() {
