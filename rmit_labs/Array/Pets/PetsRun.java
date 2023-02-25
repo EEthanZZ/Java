@@ -20,8 +20,22 @@ public class PetsRun {
         pets_types[2] = dog2;
         pets_types[3] = cat2;
         System.out.println("------------");
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++) {
             System.out.println(pets_types[i]);
+        }
+        System.out.println("\n\nOnly Dogs:");
+        for (int i = 0; i < count; i++) {
+            if (pets_types[i] instanceof Dogs) {
+                System.out.println(pets_types[i]);
+            }
+        }
+        System.out.println("\n\nOnly Cats");
+        for (int i = 0; i < count; i++) {
+            if (pets_types[i] instanceof Cats) {
+                System.out.println(pets_types[i]);
+            }
+        }
+        System.out.println("number of pets " + count);
     }
 
 }
