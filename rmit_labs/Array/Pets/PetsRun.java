@@ -1,7 +1,5 @@
 package Array.Pets;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class PetsRun {
     public static void main(String[] args) {
         int count = 0;
