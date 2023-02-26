@@ -1,6 +1,6 @@
 package Class_Inheritance;
 
-public class Employee extends People {
+public class Employee extends PersonArray {
     private String office;
     private int salary;
 
@@ -17,10 +17,9 @@ public class Employee extends People {
         super(name_people, add, email);
         this.office = office;
         this.salary = salary;
-        System.out.println("SuperClass is called");
     }
 
     public String toString() {
-        return super.toString() + "at " + office + " office " + " paid " + salary + " per year";
+        return super.toString();
     }
 }
