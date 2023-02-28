@@ -16,7 +16,6 @@ public class Sumsung extends Phones {
         this.dispaly = display;
     }
 
-    @Override
     public String toString() {
         return super.toString() + "\nDisplay: " + dispaly;
     }

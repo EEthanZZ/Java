@@ -17,7 +17,6 @@ public class Iphone extends Phones {
         this.chip = chip;
     }
 
-    @Override
     public String toString() {
         return super.toString() + ".\nChip: " + chip;
     }
