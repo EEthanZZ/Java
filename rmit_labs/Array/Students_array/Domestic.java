@@ -1,9 +1,9 @@
-package Array.Students;
+package Array.Students_array;
 
-public class domestic extends students {
+public class Domestic extends Student {
     private String fromState;
 
-    public domestic(String name, int stuID, String fromState) {
+    public Domestic(String name, int stuID, String fromState) {
         super(name, stuID);
         this.fromState = fromState;
         // TODO Auto-generated constructor stub

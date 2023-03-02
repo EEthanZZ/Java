@@ -1,9 +1,9 @@
-package Array.Students;
+package Array.Students_array;
 
-public class international extends students {
+public class International extends Student {
     private String language;
 
-    public international(String name, int stuID, String language) {
+    public International(String name, int stuID, String language) {
         super(name, stuID);
         this.language = language;
     }
