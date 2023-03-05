@@ -6,6 +6,8 @@ public class Food {
     protected boolean isHealthy;
 
     public Food(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
 
     public String getName() {

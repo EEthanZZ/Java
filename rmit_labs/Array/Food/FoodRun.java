@@ -8,7 +8,7 @@ public class FoodRun {
         count++;
         Fruit fr1 = new Fruit("Orange", 2, "AUS");
         count++;
-        Food f2 = new Food("Princles", 3);
+        Food f2 = new Food("Prinkles", 3);
         count++;
         Snack s1 = new Snack("Beef Jerk", 4, "beef");
         count++;
