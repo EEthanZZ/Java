@@ -5,7 +5,7 @@ public class Food {
     protected int price;
     protected boolean isHealthy;
 
-    public Food(String name2, int price2) {
+    public Food(String name, int price) {
     }
 
     public String getName() {
