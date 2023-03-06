@@ -1,15 +1,15 @@
-package rmit_labs.Class_Inheritance;
+package Class_Inheritance;
 
-public class People{
+public class PersonArray {
     protected String name_people;
     protected String add;
     protected String email;
 
-    public People(){
+    public PersonArray() {
         System.out.println("superclass called");
     }
 
-    public People(String name_people, String add, String email){
+    public PersonArray(String name_people, String add, String email) {
         this.name_people = name_people;
         this.add = add;
         this.email = email;
@@ -26,7 +26,8 @@ public class People{
     public String getEmail() {
         return email;
     }
-    public String toString(){
+
+    public String toString() {
         return name_people + "lives at " + add + ", the email add is " + email;
     }
 }

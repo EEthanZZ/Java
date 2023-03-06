@@ -13,5 +13,12 @@ public class PetRun {
         Dog dog3 = new Dog("Glenallachie", 10, "single malt");
         System.out.println(dog3);
         dog3.eat("big meals");
+
+        Cat cat1 = new Cat();
+        Cat cat2 = new Cat("Miko", 20, "blue");
+        System.out.println(cat2.toString());
+        cat2.setAge(100);
+        System.out.println(cat2.getAge());
+        cat2.eat("aaple");
     }
 }
