@@ -1,4 +1,4 @@
-package rmit_labs.Class;
+package Class;
 
 public class Book {
     private String title;

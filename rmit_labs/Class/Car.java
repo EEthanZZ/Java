@@ -1,4 +1,4 @@
-package rmit_labs.Class;
+package Class;
 
 public class Car {
     private String make;

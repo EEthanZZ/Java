@@ -1,4 +1,4 @@
-package rmit_labs.ArrayList.Student;
+package ArrayList.Student;
 
 import java.util.ArrayList;
 
@@ -26,6 +26,7 @@ public class StudentRun {
             System.out.println(s);
         }
 
-        students.
+        boolean isThere = students.contains(s2);
+        System.out.println(isThere);
     }
 }

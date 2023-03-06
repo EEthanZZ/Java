@@ -1,4 +1,4 @@
-package rmit_labs.ArrayList.StuTest;
+package ArrayList.StuTest;
 
 /**Student.java will be used to create ArrayList of students
   */

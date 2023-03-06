@@ -1,8 +1,10 @@
-package rmit_labs.ArrayList.City;
+package ArrayList.City;
 import java.util.*;
 
 public static void main(String[] args) {
-    ArrayList city = new ArrayList();
-    city.add("London");
+    ArrayList <city> cities = new ArrayList<city>();
+    cities.add("London");
+    
+    
     
 }

@@ -1,4 +1,4 @@
-package rmit_labs.Class_Inheritance;
+package Class_Inheritance;
 
 public class Dog extends Pet {
     private String breed;

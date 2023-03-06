@@ -1,4 +1,4 @@
-package rmit_labs.ArrayList.Student;
+package ArrayList.Student;
 
 public class Student {
     private String name;

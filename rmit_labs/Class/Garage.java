@@ -1,4 +1,4 @@
-package rmit_labs.Class;
+package Class;
 
 public class Garage {
     public static void main(String[] args) {

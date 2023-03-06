@@ -1,4 +1,4 @@
-package rmit_labs.ArrayList.StuTest;
+package ArrayList.StuTest;
 
 /**RunStudents will create ArrayList of Student type in
   * main method*/
