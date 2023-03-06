@@ -28,5 +28,9 @@ public class StudentRun {
 
         boolean isThere = students.contains(s2);
         System.out.println(isThere);
+        if (isThere){
+            System.out.println("yes");
+        }
+        System.out.println(students);
     }
 }
