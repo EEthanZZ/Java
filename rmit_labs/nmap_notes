@@ -1,0 +1,48 @@
+nmap
+-F fast 
+
+-sV  software or service version 
+-A aggressive  -- all
+
+-p — scan a specific port
+-p 22 — scan ssh
+-p-   all ports
+
+
+-sT  —scan TCP
+
+-sn   scan the network, host discovery, host reply the ICMP package. Eg. 
+-sn   192.168.1.1
+OR
+-sn   192.167.1.1-254    192.168.1.1/24
+To avoid the missing ICMP reply blocked by the server, use:
+-Pn   No ping
+Treat all host as online, skip host discovery
+
+-O   scan all 1000 ports and detect the OS
+
+-sS    Stealth scan, only scan TCP without ACK flag
+
+-sU   UDP scan
+If the scanned port responses with an ICMP, means at the port is closed. (Unreachable)
+
+Output format: 
+-oA    —all four formats <file>
+-oX    — Xml format
+-oN   —Normal, human-readable
+-oG   —Grepable format 
+-oS   —script
+-v details
+-vv more details
+
+
+Inverse TCP Flag nScan:  — does not apply on Windows
+To avoid been detected by IDS
+If no response, mean no port is open.
+If the port is closed, immediately receive ACK, RST.
+
+
+-sF   —FIN, sending a TCP packet with FIN header 
+-sX  —XMAS scan, combine FIN, URGENT and PUSH flags,
+-sN   —NULL   —no TCP flags is sent
+
