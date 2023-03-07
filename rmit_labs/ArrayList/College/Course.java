@@ -28,4 +28,19 @@ public class Course {
     public void removeStudent(){
         
     }
+
+    public void listStudent(){
+        for(Student s: students){
+            System.out.println(s);
+        }
+    }
+    public int numberOfStudents(){
+        return students.size();
+    }
+    public String getCID(){
+        return cID;
+    }
+    public String getCName(){
+        return cName;
+    }
 }
