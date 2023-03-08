@@ -26,9 +26,22 @@ public class Course {
     }
 
     public void removeStudent(){
-        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Student ID: ");
+        int id = input.nextInt();
+             /*Iterator iter = students.iterator();
+     while(iter.hasNext()){
+       Student s = (Student)iter.next();
+       if(id == s.getID())
+         students.remove(s);
+     }*/
+        for(int i=0; i<students.size(); i++){
+            Student s = students.get(i);
+            if(id == s.getID()){
+                students.remove(i);
+            }
+        }
     }
-
     public void listStudent(){
         for(Student s: students){
             System.out.println(s);
@@ -36,6 +49,22 @@ public class Course {
     }
     public int numberOfStudents(){
         return students.size();
+    }
+    public Student searchStudentById(int id){
+        for (Student s:students){
+            if(s.getID() == id){
+                return s;
+            }
+        }
+        return null;
+    }
+    public Student searchStudentByName(String name){
+        for (Student s:students){
+            if (s.getName().equalsIgnoreCase(name)){
+                return s;
+            }
+        }
+        return null;
     }
     public String getCID(){
         return cID;
