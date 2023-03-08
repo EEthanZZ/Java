@@ -112,4 +112,7 @@ public class College {
 
     }
 }
+public String toString(){
+    return "College " + cName;
+}
 }
