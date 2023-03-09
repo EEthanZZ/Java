@@ -1,9 +1,9 @@
 package ArrayList.lab4_1_Shopping;
 
 public class Item {
-    protected String name;
-    protected double price;
-    protected int qty;
+    private String name;
+    private double price;
+    private int qty;
 
     public Item(){
     }
@@ -36,8 +36,6 @@ public class Item {
     }
 
     public String toString(){
-        return name + ": " + "qty " + qty + "Total: " + qty*price;
-    }
-    public void run() {
+        return name + ": " + "qty " + qty;
     }
 }

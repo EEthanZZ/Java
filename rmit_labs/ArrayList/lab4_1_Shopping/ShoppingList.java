@@ -49,13 +49,13 @@ public class ShoppingList {
     public void run(){
         boolean flag = true;
         int choice = 0;
-        Scanner input = new Scanner(System.in);
+        Scanner input_1 = new Scanner(System.in);
         while (flag){
             System.out.println("1: Add an item: \n" + 
             "2: Remove an item: \n" + 
-            "3: List items: " + 
+            "3: List items: \n" + 
             "4: How Many Itmes: ");
-        choice = input.nextInt();
+            choice = input_1.nextInt();
             switch(choice){
                 case 1:
                 addItem();
@@ -71,10 +71,9 @@ public class ShoppingList {
                 break;
                 case 5: 
                 default:
-                System.out.println("Wrong");
                 flag = false;
+                System.out.println("Wrong");
                 break;
-
             }
         }
         }
