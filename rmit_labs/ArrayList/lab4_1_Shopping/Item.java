@@ -1,4 +1,4 @@
-package ArrayList.lab4;
+package ArrayList.lab4_1_Shopping;
 
 public class Item {
     protected String name;
@@ -37,5 +37,7 @@ public class Item {
 
     public String toString(){
         return name + ": " + "qty " + qty + "Total: " + qty*price;
+    }
+    public void run() {
     }
 }

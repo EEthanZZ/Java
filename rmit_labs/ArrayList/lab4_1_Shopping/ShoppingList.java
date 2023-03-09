@@ -1,18 +1,20 @@
-package ArrayList.lab4;
+package ArrayList.lab4_1_Shopping;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.w3c.dom.Attr;
-
-public class ShoppingList extends Item{
+public class ShoppingList {
+    private String name;
+    private int qty;
     private ArrayList <Item> items;
-    public ShoppingList(){
-    }
-    public ShoppingList(String name, double price, int qty){
-        super(name, price, qty);
-        items = new ArrayList<Item>();
 
+    public ShoppingList(){
+        items = new ArrayList<>();
+    }
+    public ShoppingList(String name, int qty){
+        this.name = name;
+        this.qty = qty;
+        items = new ArrayList<Item>();
     }
     private void addItem(){
         Scanner input = new Scanner(System.in);
@@ -20,7 +22,9 @@ public class ShoppingList extends Item{
         String itemName = input.nextLine();
         System.out.println("Quantity?");
         int qty = input.nextInt();
-        Item new_item = new Item(name, qty);
+        System.out.println("Price: ");
+        double price = input.nextInt();
+        Item new_item = new Item(itemName, qty);
         items.add(new_item);
     }
     private void listItems(){
@@ -38,20 +42,20 @@ public class ShoppingList extends Item{
                 items.remove(i);
             }
         }
-
     }
     public int displayNoOfItems(){
         return items.size();
     }
     public void run(){
         boolean flag = true;
+        int choice = 0;
+        Scanner input = new Scanner(System.in);
         while (flag){
             System.out.println("1: Add an item: \n" + 
             "2: Remove an item: \n" + 
             "3: List items: " + 
             "4: How Many Itmes: ");
-            Scanner input = new Scanner(System.in);
-            int choice = input.nextInt();
+        choice = input.nextInt();
             switch(choice){
                 case 1:
                 addItem();
@@ -66,6 +70,8 @@ public class ShoppingList extends Item{
                 displayNoOfItems();
                 break;
                 case 5: 
+                default:
+                System.out.println("Wrong");
                 flag = false;
                 break;
 
