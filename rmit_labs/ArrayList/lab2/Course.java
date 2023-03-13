@@ -1,5 +1,6 @@
 package ArrayList.lab2;
 
+import java.security.Policy;
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -52,4 +53,28 @@ public class Course {
             }
         }
     }
-}
+    public void lisyAll(){
+        for (Person p: people){
+            System.out.println(p);
+            }
+        }
+    public void listEmployees(){
+        for (Person p: people){
+            if (p instanceof Employee){
+                System.out.println(p);
+            }
+        }
+    }
+    public void removeStudent(Student s){
+        people.remove(s);
+    }
+    public int getCourseId(){
+        return Cid;
+       }
+       public String getCourseName(){
+         return cName;
+       }
+       public String toString(){
+        return Cid + " " + cName;
+       }
+    }
