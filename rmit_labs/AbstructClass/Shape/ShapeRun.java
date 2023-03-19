@@ -1,10 +1,6 @@
-package AbstructClass;
+package AbstructClass.Shape;
 
 import java.util.ArrayList;
-
-import AbstructClass.Shape.Circle;
-import AbstructClass.Shape.Shape;
-import AbstructClass.Shape.Square;
 
 public class ShapeRun {
     public static void main(String[] args) {
