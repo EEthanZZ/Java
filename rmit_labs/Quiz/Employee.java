@@ -52,4 +52,7 @@ public Employee(String name, String add, int phone){
             "}";
     }
 
+    public void run() {
+    }
+
 }
