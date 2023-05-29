@@ -20,10 +20,10 @@ public class Course{
         Scanner input = new Scanner(System.in);
         System.out.println("ID: ");
         int id = input.nextInt();
-        System.out.println();//add a new line after enter id
+        System.out.println();
         System.out.println("Name: ");
         String name = input.next();
-        System.out.println();//add a new line after name cfreated
+        System.out.println();
         Student s1 = new Student(name, id);
 
         //add Student s1 to ArrayList

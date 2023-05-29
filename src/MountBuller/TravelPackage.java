@@ -5,6 +5,8 @@ import java.time.LocalDate;
 
 
 public class TravelPackage implements Serializable {
+    private Customer customers;
+    private Accommodation accommodations;
     private int packageID;
     private int custId;
     private LocalDate startDate;
@@ -32,7 +34,13 @@ public class TravelPackage implements Serializable {
         this(custId, duration, starDate);
         this.lessonsNo = lessonsNo;
     }
-
+    public TravelPackage( Customer customers, Accommodation accommodations, LocalDate startDate, int duration) {
+        this.packageID = Integer.parseInt("" + customers.getcID() + nextID++);;
+        this.customers= customers;
+        this.accommodations = accommodations;
+        this.startDate = startDate;
+        this.duration = duration;
+    }
 
     public int getPackageID() {
         return this.packageID;
@@ -121,16 +129,34 @@ public class TravelPackage implements Serializable {
     public void setHasLessonFee(boolean hasLessonFee) {
         this.hasLessonFee = hasLessonFee;
     }
+    private double calculateLiftPassCost() {
+        if (duration == 5) {
+            // 10% discount for first 5 days
+            liftPassCost = liftPassCost * 5 * 0.9; 
+        } else if (duration > 5) {
+                //life pass
+            liftPassCost=200.0; 
+        } else {
+            liftPassCost = liftPassCost * duration;
+        }
+        return liftPassCost;
+    }
+
 
 
     @Override
     public String toString() {
-        return "{" +
-            " packageID='" + getPackageID() + "'" +
-            ", custId='" + getCustId() + "'" +
-            ", startDate='" + getStartDate() + "'" +
-            ", duration='" + getDuration() + "'" +
-            "}";
+        String liftPassnull = "";
+        if (liftPass==true) {
+            liftPassnull = "Costs: $" + calculateLiftPassCost();
+        }
+        return "Package ID: " + packageID + "\n" +
+                "Customer ID: " +customers.getcID()+" "+ customers.getFirstName() + " " + customers.getLastName() + " " +customers.getSkiLevel()+ "\n" +
+                "Accommodation ID： + "+ accommodations.getaccommodationID()+ "\n" + accommodations.getType() + 
+                "Start date: " + startDate.toString() + "\n" +
+                "Duration in days: " + duration + "\n"+
+                "Lift pass: " + (liftPass ? "Included " + liftPassnull : "Not included") + "\n" +
+               "Lesson fee: " + (customers.lessonFee(lessonsNo));
     }
 
 }

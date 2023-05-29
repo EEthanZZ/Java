@@ -3,22 +3,22 @@ package MountBuller;
 import java.io.Serializable;
 
 public class Accommodation implements Serializable {
-    private int aID;
+    private int accommodationID;
     private String type;
     private int capacity;
     private double pricePerNight;
     private boolean available;
 
-    public Accommodation(int aID, String type, int capacity, double pricePerNight) {
-        this.aID = aID;
+    public Accommodation(int accommodationID, String type, int capacity, double pricePerNight) {
+        this.accommodationID = accommodationID;
         this.type = type;
         this.capacity = capacity;
         this.pricePerNight = pricePerNight;
         this.available = true;
     }
 
-    public int getaID() {
-        return aID;}
+    public int getaccommodationID() {
+        return accommodationID;}
     public String getType() {
         return type;
     }
@@ -42,5 +42,5 @@ public class Accommodation implements Serializable {
     @Override
     public String toString() {
         return String.format("Accommodation ID: %d\nType: %s\nCapacity: %d\nPrice per night: %.2f\n",
-                aID, type, capacity, pricePerNight);}
+        accommodationID, type, capacity, pricePerNight);}
 }

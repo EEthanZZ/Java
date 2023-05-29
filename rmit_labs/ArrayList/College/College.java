@@ -1,7 +1,6 @@
 package ArrayList.College;
 import java.util.*;
 
-import Array.Phones.Iphone;
 public class College {
     ArrayList<Course> courses = new ArrayList<Course>();
     private String cName;

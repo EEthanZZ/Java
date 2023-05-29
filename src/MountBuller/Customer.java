@@ -37,6 +37,23 @@ public class Customer implements Serializable {
                 return "only input 1, 2 or 3";
         }
     }
+    public double lessonFee(int numLessons) {
+        double lessonFees;
+        switch (skiLevel) {
+            case 1:
+                lessonFees = 25.0;
+                break;
+            case 2:
+                lessonFees = 20.0;
+                break;
+            case 3:
+                lessonFees = 15.0;
+                break;
+            default:
+                return 0.0;
+        }
+        return numLessons * lessonFees;}
+
     public void setSkiLevel(int skiLevel) {
         this.skiLevel = skiLevel;}
 
